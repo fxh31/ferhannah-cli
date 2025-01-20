@@ -1,10 +1,11 @@
 import chalk from "chalk"
 import log from "./log"
-const figlet = require("figlet")
+// const figlet = require("figlet")
 
 const goodPrinter = async (message: string) => {
-  const data = await figlet(message)
-  console.log(chalk.rgb(40, 156, 193).visible(data))
+  // const data = await figlet(message)
+  // console.log(chalk.rgb(40, 156, 193).visible(data))
+  console.log(chalk.rgb(40, 156, 193).visible(message))
 }
 
 export const successInfo = async (projectName: string) => {
