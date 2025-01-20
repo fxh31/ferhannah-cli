@@ -1,19 +1,31 @@
 {
   "name": "ferhannah-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "ferhannah-cli 脚手架工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js",
     "build-ts": "rollup --config rollup.config.ts --configPlugin typescript"
   },
+  "keywords": [
+    "Vite",
+    "Vue3",
+    "React",
+    "CLI",
+    "Ant Design",
+    "Element Plus"
+  ],
+  "bin": {
+    "ferhannah": "./bin/index.js"
+  },
   "author": "fxh",
   "license": "ISC",
   "type": "module",
   "files": [
     "bin",
-    "dist"
+    "dist",
+    "README.md"
   ],
   "devDependencies": {
     "@inquirer/prompts": "^7.2.3",

@@ -26,6 +26,6 @@ export default defineConfig({
     }),
     json(),
     commonjs(),
-    // terser(),
+    terser(),
   ],
 });
