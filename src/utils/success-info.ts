@@ -1,7 +1,6 @@
 import chalk from "chalk"
 import log from "./log"
-const figlet = require("figlet")
-
+import figlet from "figlet"
 const goodPrinter = async (message: string) => {
   const data = await figlet(message)
   console.log(chalk.rgb(40, 156, 193).visible(data))

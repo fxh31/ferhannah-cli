@@ -3,6 +3,7 @@ import { clone } from "../utils/clone"
 import fs from 'fs-extra'
 import { templateList, templates } from "../utils/template"
 import { getProjectPath, isOverwrite } from "../utils/overwrite"
+import { checkVersion } from "../utils/check-version"
 
 export async function create(projectName?: string) {
   if (!projectName) {
@@ -16,6 +17,9 @@ export async function create(projectName?: string) {
     if (!isExist) return
     await fs.remove(projectPath)
   }
+  
+  // 检查版本更新
+  await checkVersion()
 
   // 选择版本
   const templateName = await select({
