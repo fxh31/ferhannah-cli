@@ -1,0 +1,20 @@
+name: Sync from Gitee
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 时间 0 点执行（可调整）
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 拉取完整历史记录
+
+      - name: Sync from Gitee
+        run: |
+          git remote add gitee https://gitee.com/feng-xiaohan/ferhannah-cli.git
+          git pull gitee master  # 替换为你的分支名
+          git push origin master
