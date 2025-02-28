@@ -15,6 +15,6 @@ jobs:
 
       - name: Sync from Gitee
         run: |
-          git remote add gitee https://gitee.com/feng-xiaohan/ferhannah-cli.git
-          git pull gitee master  # 替换为你的分支名
+          git remote add origin https://gitee.com/feng-xiaohan/ferhannah-cli.git
+          git pull origin master  # 替换为你的分支名
           git push origin master
